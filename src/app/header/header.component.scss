@@ -1,13 +1,16 @@
 $themenColor: rgb(255, 136, 0);
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: white;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top : 1rem;
   margin-bottom: 1rem;
-  border: 1px solid red;
+  padding: .8rem 10rem;
+  border-bottom: rgba($color: #aaa, $alpha: .6) 1px solid;
 }
 
 .header-brand-h1 {
@@ -15,40 +18,36 @@ $themenColor: rgb(255, 136, 0);
   background: $themenColor;
   letter-spacing: 0.2rem;
   font-size: 2.2rem;
-}
-
-.header-container {
-  border: 1px solid black;
+  padding: 0.2rem 0.4rem;
 }
 
 .header-container-list {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
   list-style: none;
   align-items: center;
   width: 100%;
   height: 100%;
 }
 
-.header-container-list-item{
-    margin-right: 4rem;
-    font-weight: 600;
-    font-size: small;
-    color: rgba($color: #312e2e, $alpha: .8);
-    text-transform: uppercase;
+.header-container-list-item {
+  margin-right: 4rem;
+  font-weight: 600;
+  font-size: small;
+  color: rgba($color: #312e2e, $alpha: 0.8);
+  text-transform: uppercase;
 }
 
 .header-container-list-item:last-child {
-    margin: 0 0;
+  margin: 0 0;
 }
 
-.header-container-list-item-badge{
-    color: white;
-    background: $themenColor;
-    padding: .25rem .5rem;
-    font-weight: 300;
-    font-size: small;
-    border-radius: .2rem;
-    margin-left: .5rem;
+.header-container-list-item-badge {
+  color: white;
+  background: $themenColor;
+  padding: 0.25rem 0.5rem;
+  font-weight: 300;
+  font-size: small;
+  border-radius: 0.2rem;
+  margin-left: 0.5rem;
 }

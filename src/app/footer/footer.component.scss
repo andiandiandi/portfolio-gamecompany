@@ -1,0 +1,140 @@
+$themenColor: rgb(255, 136, 0);
+
+* {
+  color: rgba($color: white, $alpha: 0.7);
+}
+
+.container {
+  background: rgb(17, 17, 17);
+}
+
+.container-insidecontainer {
+  display: grid;
+  grid-template-columns: 20% 60%;
+  gap: 1rem;
+  justify-content: space-around;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-bottom: 1px solid white;
+}
+
+.container-brand {
+  display: flex;
+  justify-content: center;
+}
+
+.header-brand-h1 {
+  color: white;
+  background: $themenColor;
+  letter-spacing: 0.2rem;
+  font-size: 2.2rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.wrapper-links-cta {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-links {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+}
+
+.container-links h6 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: rgba($color: white, $alpha: 0.8);
+}
+
+.container-links ul {
+  list-style: none;
+}
+
+.container-links li {
+  margin-top: 0.4rem;
+}
+
+.container-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.email {
+  height: 25px;
+  color: black;
+}
+
+.newsletter-header {
+  color: rgba($color: white, $alpha: 0.8);
+}
+
+.signup-btn {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  background: rgba($color: rgb(145, 18, 18), $alpha: 0.8);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 0.1rem;
+  cursor: pointer;
+}
+
+.below-container {
+  padding: 1rem 5%;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .container-insidecontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .wrapper-links-cta {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .container-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .container-links ul {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .container-insidecontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .wrapper-links-cta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .container-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .container-links ul {
+    display: none;
+  }
+}

@@ -8,6 +8,7 @@ $btnFontsize: 1rem;
 .container {
   display: flex;
   flex-direction: column;
+  margin-top: 3.5 rem;
 }
 
 .container-contact-btn {
@@ -27,78 +28,10 @@ $btnFontsize: 1rem;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   text-transform: uppercase;
-}
-
-.container-games {
-  position: relative;
-  height: inherit;
-  min-height: $gamesImageHeight;
-  max-height: $gamesImageHeight;
-}
-
-.container-games-playbtn {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  border: none;
-  width: 180px;
-  height: 50px;
-  font-weight: bold;
-  border-radius: 0.1rem;
-  text-transform: uppercase;
-  background: white;
-  color: $themenColor;
-  z-index: 2;
-}
-
-.container-games-playbtn-container {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  gap: 0.4rem;
-}
-
-.container-games-image {
-  display: block;
-  max-height: $gamesImageHeight;
-  min-height: $gamesImageHeight;
-}
-
-.container-games-arrowdown {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-  bottom: -4rem;
-  width: 32px;
-  height: 32px;
-}
-
-.container-games-arrowdown img {
-  -webkit-animation: mover 0.5s infinite alternate;
-  animation: mover 0.5s infinite alternate;
-  color: black;
-}
-@-webkit-keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-1rem);
-  }
-}
-@keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-1rem);
-  }
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
+  
 }
 
 .container-about {
@@ -311,13 +244,15 @@ $btnFontsize: 1rem;
   color: rgba($color: #000, $alpha: 0.7);
 }
 
-.container-career-btn {
+.container-career-anchor {
   border: none;
+  text-decoration: none;
   padding: $btnPadding;
   background: $themenColor;
   color: white;
   font-weight: $btnFontweight;
   font-size: $btnFontsize;
+  cursor: pointer;
 }
 
 .press {
@@ -334,37 +269,50 @@ $btnFontsize: 1rem;
 }
 
 .press-news {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 2rem;
-  margin: 3rem 0;
+  margin: 3rem 3rem;
 }
 
 .press-news-item {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0;
   flex-direction: column;
   gap: 1.5rem;
   background: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.press-news-item-img img {
-  width: 100%;
-  height: 250px;
+.zoom {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
-.press-news-item-content{
+.zoom:hover {
+  transform: scale(1.05);
+  
+}
+
+.press-news-item-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  width: inherit;
 }
 
 .press-news-item-content-date {
   color: $themenColor;
 }
 
-.press-news-item-content-description{
-  color:rgba($color: #000000, $alpha: .9)
+.press-news-item-content-description {
+  color: rgba($color: #000000, $alpha: 0.9);
 }
 
 .press-news-item-content-readmore {
@@ -377,13 +325,14 @@ $btnFontsize: 1rem;
   color: $themenColor;
 }
 
-.press-news-item-content-readmore a:after{
-  content:"  >";
+.press-news-item-content-readmore a:after {
+  content: "  >";
   font-weight: 900;
 }
 
 .press-btn {
   border: none;
+  text-decoration: none;
   padding: $btnPadding;
   margin-top: 2rem;
   background: $themenColor;
@@ -392,4 +341,36 @@ $btnFontsize: 1rem;
   font-size: $btnFontsize;
   text-transform: uppercase;
   align-self: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container-about-insidecontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    gap: 3%;
+    padding: 5rem;
+    margin: 10rem 5% 0 5%;
+    border: 1px solid red;
+  }
+
+  .container-about-insidecontainer-bg{
+    display: none;
+  }
+
+  .container-about-insidecontainer-imagecontainer{
+    display: none;
+  }
+
+  .container-career-positions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .container-career-positions {
+    grid-template-columns: 1fr;
+  }
 }
