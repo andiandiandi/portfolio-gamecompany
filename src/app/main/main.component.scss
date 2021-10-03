@@ -1,5 +1,5 @@
 $themenColor: rgb(255, 115, 0);
-$gamesImageHeight: 650px;
+$gamesImageHeight: 750px;
 $headingSize: 2.5rem;
 $btnPadding: 0.8rem 1.8rem;
 $btnFontweight: bolder;
@@ -29,43 +29,46 @@ $btnFontsize: 1rem;
   -webkit-transform: rotate(-90deg);
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  
-  
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .container-about {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-image: url("https://i.pinimg.com/originals/d1/10/de/d110dee051323ffa6f981d58aa2366ea.jpg");
-  background-size: 100%;
+  background-size: 120%;
   width: 100%;
   min-height: 600px;
-  max-height: 600px;
 }
 
 .container-about-insidecontainer {
   position: relative;
-  display: flex;
-  height: inherit;
-  gap: 3%;
-  padding: 5rem;
-  margin: 10rem 5% 0 5%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 100%;
 }
 
 .container-about-insidecontainer-bg {
   position: absolute;
-  top: 10%;
-  right: 16%;
+  top: 5rem;
+  right: 20%;
   min-width: 35%;
   min-height: 30%;
   background-image: url("https://img.freepik.com/free-vector/white-honeycomb-background-3d-style_23-2148386680.jpg?size=626&ext=jpg");
   background-size: 100%;
-  opacity: 0.4;
+  opacity: 0.3;
   z-index: 2;
 }
 
 .container-about-insidecontainer-descriptioncontainer {
-  min-width: 50%;
-  width: 50%;
   flex-direction: column;
   z-index: 3;
 }
@@ -113,6 +116,7 @@ $btnFontsize: 1rem;
 .container-about-insidecontainer-imagecontainer {
   width: auto;
   z-index: 3;
+  margin: 3rem;
 }
 
 .container-about-insidecontainer-imagecontainer img {
@@ -122,7 +126,7 @@ $btnFontsize: 1rem;
 
 .featuredgames {
   background-image: url("https://www.pngkey.com/png/full/377-3772788_join-us-yellow-swoosh-png.png");
-  background-size: 100%;
+  background-size: 120%;
 }
 
 .featuredgames-header {
@@ -134,13 +138,13 @@ $btnFontsize: 1rem;
 
 .featuredgames-container {
   display: flex;
-  margin-top: 5rem;
-  margin: 5rem 5% 5rem 5%;
-  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 5% 4rem 5%;
+  border: 1px solid blue;
 }
 
 .featuredgames-container-img {
-  width: 40%;
 }
 
 .featuredgames-container-img img {
@@ -152,9 +156,8 @@ $btnFontsize: 1rem;
 .featuredgames-container-cards {
   display: flex;
   justify-content: space-around;
-  align-content: space-around;
+  align-content: center;
   gap: 3rem;
-  width: 60%;
 }
 
 .featuredgames-container-cards-card {
@@ -296,7 +299,6 @@ $btnFontsize: 1rem;
 
 .zoom:hover {
   transform: scale(1.05);
-  
 }
 
 .press-news-item-content {
@@ -343,23 +345,20 @@ $btnFontsize: 1rem;
   align-self: center;
 }
 
+
+
 @media only screen and (max-width: 1200px) {
   .container-about-insidecontainer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    gap: 3%;
-    padding: 5rem;
-    margin: 10rem 5% 0 5%;
+   
+  }
+
+  .featuredgames-container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     border: 1px solid red;
   }
 
-  .container-about-insidecontainer-bg{
-    display: none;
-  }
-
-  .container-about-insidecontainer-imagecontainer{
+  .featuredgames-container-img{
     display: none;
   }
 
@@ -368,8 +367,38 @@ $btnFontsize: 1rem;
   }
 }
 
+@media only screen and (max-width: 992px) {
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container-about-insidecontainer {
+    grid-template-columns: 100%;
+  }
+
+  .container-about{
+    background-size: 150%;
+  }
+
+  .container-about-insidecontainer-imagecontainer {
+    display: none;
+  }
+
+  .container-career-positions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media only screen and (max-width: 576px) {
+  .container-about-insidecontainer-bg {
+    display: none;
+  }
+
+  .container-about-insidecontainer-imagecontainer {
+    display: none;
+  }
+
   .container-career-positions {
     grid-template-columns: 1fr;
   }

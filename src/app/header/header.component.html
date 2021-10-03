@@ -4,6 +4,26 @@
         <h1 class="header-brand-h1">Gamingverse</h1>
     </div>
 
+    <div *ngIf="showHamburgerIcon" class="header-hamburger">
+        <button class="header-hamburger-btn" (click)="toggleHamburger(true)">
+            <img width="32px" height="32px" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Famazoniareal.com.br%2Fwp-content%2Fthemes%2Famazoniareal-2015%2Fimages%2Fmenu.png&f=1&nofb=1" alt="">
+        </button>
+    </div>
+
+    <div *ngIf="!showHamburgerIcon" class="header-hamburger">
+        <button class="header-hamburger-btn" (click)="toggleHamburger(false)">
+            <img width="32px" height="32px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F8d%2FVisualEditor_-_Icon_-_Close.svg%2F120px-VisualEditor_-_Icon_-_Close.svg.png&f=1&nofb=1" alt="">
+        </button>
+        <div class="header-hamburger-expanded">
+            <ul class="header-hamburger-expanded-ul">
+                <li>GAMES</li>
+                <li>COMPANY</li>
+                <li>CAREER</li>
+                <li>NEWS</li>
+            </ul>
+        </div>
+    </div>
+
     <div class="header-container">
         <ul class="header-container-list">
             <li class="header-container-list-item">
