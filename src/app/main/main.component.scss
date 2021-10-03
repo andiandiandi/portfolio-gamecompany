@@ -126,7 +126,7 @@ $btnFontsize: 1rem;
 
 .featuredgames {
   background-image: url("https://www.pngkey.com/png/full/377-3772788_join-us-yellow-swoosh-png.png");
-  background-size: 120%;
+  background-size: 150%;
 }
 
 .featuredgames-header {
@@ -141,10 +141,6 @@ $btnFontsize: 1rem;
   justify-content: space-between;
   align-items: center;
   margin: 4rem 5% 4rem 5%;
-  border: 1px solid blue;
-}
-
-.featuredgames-container-img {
 }
 
 .featuredgames-container-img img {
@@ -275,7 +271,7 @@ $btnFontsize: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 2rem;
-  margin: 3rem 3rem;
+  margin: 2rem 3rem;
 }
 
 .press-news-item {
@@ -284,9 +280,17 @@ $btnFontsize: 1rem;
   justify-content: flex-start;
   padding: 2rem 0;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   background: white;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.press-news-item-img{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.press-news-item-img img{
+  width:100%;
+  height:100%;
 }
 
 .zoom {
@@ -304,9 +308,12 @@ $btnFontsize: 1rem;
 .press-news-item-content {
   display: flex;
   flex-direction: column;
+  background: rgba($color: white, $alpha: .4);
+  border-radius: .2rem;
   gap: 1.5rem;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem;
   width: inherit;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .press-news-item-content-date {
@@ -348,14 +355,17 @@ $btnFontsize: 1rem;
 
 
 @media only screen and (max-width: 1200px) {
-  .container-about-insidecontainer {
-   
+
+  .featuredgames {
+    background-image: none;
   }
 
   .featuredgames-container-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    border: 1px solid red;
+    justify-content: center;
+    width:100%;
+    padding: 0 15%;
   }
 
   .featuredgames-container-img{
@@ -365,12 +375,14 @@ $btnFontsize: 1rem;
   .container-career-positions {
     grid-template-columns: 1fr 1fr;
   }
+
+  .press-news {
+    grid-template-columns: 1fr;
+    padding: 0 10%;
+
+  }
+  
 }
-
-@media only screen and (max-width: 992px) {
-
-}
-
 
 @media only screen and (max-width: 768px) {
   .container-about-insidecontainer {
@@ -388,6 +400,11 @@ $btnFontsize: 1rem;
   .container-career-positions {
     grid-template-columns: 1fr 1fr;
   }
+
+  .press-news {
+    padding: 0 0;
+  }
+
 }
 
 @media only screen and (max-width: 576px) {
