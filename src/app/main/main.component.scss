@@ -284,13 +284,15 @@ $btnFontsize: 1rem;
   background: white;
 }
 
-.press-news-item-img{
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.press-news-item-img {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.press-news-item-img img{
-  width:100%;
-  height:100%;
+.press-news-item-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .zoom {
@@ -308,8 +310,8 @@ $btnFontsize: 1rem;
 .press-news-item-content {
   display: flex;
   flex-direction: column;
-  background: rgba($color: white, $alpha: .4);
-  border-radius: .2rem;
+  background: rgba($color: white, $alpha: 0.4);
+  border-radius: 0.2rem;
   gap: 1.5rem;
   padding: 1rem;
   width: inherit;
@@ -352,10 +354,7 @@ $btnFontsize: 1rem;
   align-self: center;
 }
 
-
-
 @media only screen and (max-width: 1200px) {
-
   .featuredgames {
     background-image: none;
   }
@@ -364,11 +363,11 @@ $btnFontsize: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
-    width:100%;
+    width: 100%;
     padding: 0 15%;
   }
 
-  .featuredgames-container-img{
+  .featuredgames-container-img {
     display: none;
   }
 
@@ -379,9 +378,7 @@ $btnFontsize: 1rem;
   .press-news {
     grid-template-columns: 1fr;
     padding: 0 10%;
-
   }
-  
 }
 
 @media only screen and (max-width: 768px) {
@@ -389,7 +386,7 @@ $btnFontsize: 1rem;
     grid-template-columns: 100%;
   }
 
-  .container-about{
+  .container-about {
     background-size: 150%;
   }
 
@@ -404,7 +401,6 @@ $btnFontsize: 1rem;
   .press-news {
     padding: 0 0;
   }
-
 }
 
 @media only screen and (max-width: 576px) {

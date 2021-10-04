@@ -1,5 +1,9 @@
 $themenColor: rgb(255, 136, 0);
 
+a{
+  text-decoration: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -50,6 +54,10 @@ $themenColor: rgb(255, 136, 0);
   padding: 0.2rem 0.6rem;
 }
 
+.header-brand-h1 a {
+  color: inherit;
+}
+
 .header-container-list {
   display: flex;
   justify-content: space-between;
@@ -65,6 +73,10 @@ $themenColor: rgb(255, 136, 0);
   font-size: small;
   color: rgba($color: #312e2e, $alpha: 0.8);
   text-transform: uppercase;
+}
+
+.header-container-list-item a{
+  color: inherit;
 }
 
 .header-container-list-item:last-child {

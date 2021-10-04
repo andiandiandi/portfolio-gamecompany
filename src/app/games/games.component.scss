@@ -1,4 +1,14 @@
+$themenColor: rgb(255, 136, 0);
 $headingColor: rgb(10, 124, 124);
+
+$btnPadding: 0.8rem 1.8rem;
+$btnFontweight: bolder;
+$btnFontsize: 1rem;
+
+img {
+  background-color: #aaa;
+  border-radius: 0.1rem;
+}
 
 .container {
   margin-top: 72px;
@@ -23,56 +33,207 @@ $headingColor: rgb(10, 124, 124);
 
 .header-container-p {
   text-align: center;
+  line-height: 1.5rem;
+  max-width: 100ch;
 }
 
-.games-grid {
+.pane {
+  position: relative;
+}
+
+.content-pane {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%, 0);
+  width: 100%;
+}
+
+.focused-h3 {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-right: 1rem;
+}
+
+.nonfocused-h3 {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-right: 1rem;
+}
+
+.games-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.games-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 1px solid red;
-  margin: 0 10%;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 5%;
 }
 
-.games-grid img {
-    max-width: 300px;
-    max-height: 300px;
+.upper-pane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column: 1 / -1;
+  grid-row: 1/3;
+}
+
+.focus {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.right-pane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+}
+
+.nonfocus {
+  background: rgba($color: black, $alpha: 0.4);
+  margin: 1rem;
+}
+
+.below-pane {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+}
+
+.participate-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10rem 5%;
+  gap: 5%;
+}
+
+.participate-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.participate-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15%;
+}
+
+.participate-header {
+  font-size: 2.5rem;
+  color: $themenColor;
+}
+
+.participate-p {
+  line-height: 1.5rem;
+  max-width: 50ch;
+}
+
+.participate-btn {
+  border: none;
+  background-color: $themenColor;
+  padding: 1.2rem 5rem;
+  font-size: 0.8rem;
+  font-weight: $btnFontweight;
+  color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .header-container-h1 {
+    color: $headingColor;
+    font-size: 3rem;
+  }
+  
+
+  .header-container-p {
+    text-align: center;
+    line-height: 1.5rem;
+    min-width: 55ch;
   }
 
-@media only screen and (max-width: 1200px) {
-  .header-container {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-
-  .games-grid {
-    display: grid;
+  .games-container {
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    justify-items: center;
-    gap: 1rem;
   }
 
-  .games-grid img {
-    max-width: 250px;
-    max-height: 250px;
+  .focus {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  .right-pane {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  .below-pane {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .header-container {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 
-  .games-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    justify-items: center;
+  .games-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .upper-pane {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
     gap: 1rem;
   }
 
-  .games-grid img {
-    max-width: 350px;
-    max-height: 350px;
+  .focus {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .nonfocus {
+    margin: 0;
+  }
+
+  .right-pane {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .below-pane {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .participate-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 10rem;
+  }
+
+  .participate-description-container {
+    justify-content: center;
+    gap: 4rem;
   }
 }
