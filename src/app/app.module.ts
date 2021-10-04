@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { ContactUsBtnComponent } from './contact-us-btn/contact-us-btn.component';
 
 const routes: Routes = [
   { path: "", component: MainComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
     MainComponent,
     SlideshowComponent,
     NavigationBarComponent,
-    GamesComponent
+    GamesComponent,
+    ContactUsBtnComponent
   ],
   imports: [
     BrowserModule,
