@@ -10,10 +10,6 @@ img {
   border-radius: 0.1rem;
 }
 
-.container {
-  margin-top: 72px;
-}
-
 .header-container {
   display: flex;
   flex-direction: column;
@@ -155,7 +151,6 @@ img {
     color: $headingColor;
     font-size: 3rem;
   }
-  
 
   .header-container-p {
     text-align: center;

@@ -1,15 +1,13 @@
 <div class="container-games">
-    <div class="container-games-navcontainerleft">
-        <button class="container-games-navcontainer-btn" (click)="doSlide(false)">
-            < </button>
-    </div>
-    <div class="container-games-navcontainerright">
-        <button class="container-games-navcontainer-btn" (click)="doSlide()">
-            >
-        </button>
-    </div>
-    <div class="container-games-game">
-        <img class="container-games-game-image" [src]="slides[index].src" alt="">
+    <button class="container-games-navcontainer-btn-left hvr-pulse" (click)="doSlide(false,true)">
+        < </button>
+    <button class="container-games-navcontainer-btn-right" (click)="doSlide(true,true)">
+        >
+    </button>
+    <div class="container-games-game" id="slideshow-container">
+        <div>
+            <img class="container-games-game-image" [src]="slides[index].src" alt="">
+        </div>
         <div class="container-games-game-container">
             <button class="container-games-game-container-playbtn hvr-pulse">
                 <div class="container-games-game-container-playbtn-container">

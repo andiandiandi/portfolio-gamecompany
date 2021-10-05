@@ -15,31 +15,68 @@ $btnFontsize: 1rem;
   position: absolute;
   top: 40%;
   left: 5%;
-  opacity: 0.4;
+  opacity: 0.6;
   background-color: white;
-  z-index: 2;
+  z-index: 3;
 }
 
 .container-games-navcontainerright {
   position: absolute;
   top: 40%;
   right: 5%;
-  opacity: 0.4;
+  opacity: 0.6;
   background-color: white;
-  z-index: 2;
+  z-index: 3;
 }
 
-.container-games-navcontainer-btn {
-  border: none;
+.container-games-navcontainer-btn-left {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  opacity: 0.6;
+  background-color: white;
+  z-index: 3;
   font-size: 3.5rem;
-  color: $themenColor;
-  opacity: 1;
-  padding: $btnPadding;
+  color: white;
+  background-color: rgba($color: cadetblue, $alpha: 0.8);
+  padding: 0 1rem;
   font-weight: 800;
+  border: none;
+  border-radius: 50%;
+}
+
+.container-games-navcontainer-btn-right {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  opacity: 0.6;
+  z-index: 3;
+  font-size: 3.5rem;
+  color: white;
+  background-color: rgba($color: cadetblue, $alpha: 0.8);
+  padding: 0 1rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container-games-navcontainer-btn-right:hover {
+  background-color: cadetblue;
+  opacity: 1;
+}
+
+.container-games-navcontainer-btn-left:hover {
+  background-color: cadetblue;
+  opacity: 1;
 }
 
 .container-games-game {
   position: relative;
+}
+
+#slideshow-container {
+  overflow: hidden;
 }
 
 .container-games-game img {
@@ -60,7 +97,7 @@ $btnFontsize: 1rem;
   left: 0;
   margin: auto;
   border: none;
-  z-index: 2;
+  z-index: 1;
 }
 
 .container-games-game-container-playbtn {

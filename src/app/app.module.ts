@@ -10,12 +10,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ContactUsBtnComponent } from './contact-us-btn/contact-us-btn.component';
+import { CareerComponent } from './career/career.component';
+import { CompanyComponent } from './company/company.component';
+import { NewsComponent } from './news/news.component';
+import { PressPaneComponent } from './press-pane/press-pane.component';
 
 const routes: Routes = [
-  { path: "", component: MainComponent},
-  { path: 'games', component: GamesComponent }
+  { path: '', component: MainComponent },
+  { path: 'games', component: GamesComponent },
+  { path: 'company', component: CompanyComponent },
+  { path: 'career', component: CareerComponent },
+  { path: 'news', component: NewsComponent },
 ];
-
 
 @NgModule({
   declarations: [
@@ -26,14 +32,15 @@ const routes: Routes = [
     SlideshowComponent,
     NavigationBarComponent,
     GamesComponent,
-    ContactUsBtnComponent
+    ContactUsBtnComponent,
+    CareerComponent,
+    CompanyComponent,
+    NewsComponent,
+    PressPaneComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes),
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
