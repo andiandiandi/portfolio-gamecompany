@@ -1,10 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-
-export interface Slide {
-  src: string;
-  title: string;
-  description: string;
-}
+import { Slide } from '../main/main.component';
 
 enum MoveDirection {
   Left,
