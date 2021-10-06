@@ -16,6 +16,9 @@ export class PressPaneComponent implements OnInit {
   @Input()
   showPress: boolean = true;
 
+  @Input()
+  renderBg: boolean = true;
+
   blogs: Blog[] = [];
 
   constructor() {}

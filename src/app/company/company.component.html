@@ -1,3 +1,64 @@
+<app-contact-us-btn></app-contact-us-btn>
 <div class="container">
+    <div class="aboutus-container">
+        <h1 class=header-container-h1>
+            About Us
+        </h1>
+        <div class="aboutus-container-content">
+            <div class="aboutus-container-content-imgcontainer">
+                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fafectadospopular.eu%2Fwp-content%2Fuploads%2F2015%2F07%2Fbusiness-office-work.jpg&f=1&nofb=1"
+                    alt="">
+            </div>
+            <div class="container-about-insidecontainer-descriptioncontainer">
+                <h1 class="container-about-insidecontainer-descriptioncontainer-header2">
+                    Next Generation
+                </h1>
+                <h2 class="container-about-insidecontainer-descriptioncontainer-header3">
+                    Instant Games
+                </h2>
+                <div class="container-about-insidecontainer-descriptioncontainer-description">
+                    <span>SOFTGAMES is an instant gaming company. We develop casual, truly social games that can be
+                        played by billions instantly across all devices. We partner closely with Facebook, Samsung and
+                        more to craft the next generation of instant games that billions of people can play together.
+                    </span>
+                </div>
+                <button class="container-about-insidecontainer-descriptioncontainer-btn">
+                    contact us
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="management-container">
+        <h1 class="management-heading">Management</h1>
+        <div class="management-container-managers">
+            <div *ngFor="let manager of managers; index as i" class="management-container-managers-manager">
+                <div [class.left]="i % 2 == 0" [class.right]="i % 2 == 1" class="manager-photo-container right">
+                    <div class="profile-img">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.stack.imgur.com%2FWmvM0.png&f=1&nofb=1"
+                            alt="">
+                        <div class="profile-img-linkedin">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ficons.iconarchive.com%2Ficons%2Fsicons%2Fbasic-round-social%2F512%2Flinkedin-icon.png&f=1&nofb=1"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div [class.right]="i % 2 == 0" [class.left]="i % 2 == 1" class="manager-content-container left">
+                    <div class="manager-description-heading">
+                        <div class="manager-name">
+                            <h5>{{manager.name}} {{manager.surname}}</h5>
+                        </div>
+                        <div class="manager-position">
+                            <h6>{{manager.position}}</h6>
+                        </div>
+                    </div>
+                    <div class="manager-description">
+                        {{manager.description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="press-title">Press Room</h1>
+
+    <app-press-pane [numberOfBlogs]="5" [showPress]="false" [renderBg]="false"></app-press-pane>
 </div>
-<p>company works!</p>

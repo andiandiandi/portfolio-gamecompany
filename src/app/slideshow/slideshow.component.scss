@@ -180,18 +180,18 @@ $btnFontsize: 1rem;
 }
 
 .container-games-game-container-header {
-  color: red;
   margin-top: 3.5rem;
   color: white;
-  background: rgba($color: #aaa, $alpha: 0.5);
+  background: rgba($color: #aaa, $alpha: 0.7);
   font-size: 3.5rem;
   padding: 0.5rem 1rem;
+  text-align: center;
 }
 
 .container-games-game-container-description {
   color: red;
   color: white;
-  background: rgba($color: #aaa, $alpha: 0.5);
+  background: rgba($color: #aaa, $alpha: 0.7);
   padding: 1rem;
   font-size: 1.5rem;
 }
@@ -237,5 +237,9 @@ $btnFontsize: 1rem;
 
   .container-games-game-container {
     top: 45%;
+  }
+
+  .container-games-game-container-description {
+    display: none;
   }
 }

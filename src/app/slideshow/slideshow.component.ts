@@ -34,7 +34,8 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     container.style.left = '0';
     container.style.width = '100%';
     container.style.height = '100%';
-    container.style.transition = 'transform 1.5s ease-out, opacity 1.5s ease-in';
+    container.style.transition =
+      'transform 1.5s ease-out, opacity 1.5s ease-in';
     container.style.zIndex = '2';
 
     let img = document.createElement('img');
@@ -42,6 +43,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     img.style.maxHeight = '750px';
     img.style.minHeight = '750px';
     img.style.width = '100%';
+    img.style.objectFit = 'cover';
     img.setAttribute('src', this.slides[this.index].src);
     container.appendChild(img);
 

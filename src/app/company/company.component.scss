@@ -1,4 +1,236 @@
+$themenColor: rgb(255, 136, 0);
+$headingColor: rgb(10, 124, 124);
+
+$btnPadding: 0.8rem 1.8rem;
+$btnFontweight: bolder;
+$btnFontsize: 1rem;
+
 .container {
-    margin-top: 4.5rem;
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutus-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.header-container-h1 {
+  color: $headingColor;
+  font-size: 3rem;
+}
+
+.aboutus-container-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  margin: 0 5%;
+}
+
+.aboutus-container-content-imgcontainer {
+}
+
+.aboutus-container-content-imgcontainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container-about-insidecontainer-descriptioncontainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.container-about-insidecontainer-descriptioncontainer-aboutanchor {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgb(10, 124, 124);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container-about-insidecontainer-descriptioncontainer-header2 {
+  font-size: 3.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.container-about-insidecontainer-descriptioncontainer-header3 {
+  font-size: 3rem;
+  color: $themenColor;
+  margin-bottom: 2.5rem;
+}
+
+.container-about-insidecontainer-descriptioncontainer-description {
+  color: rgba($color: #000000, $alpha: 0.8);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  max-width: 50ch;
+  line-height: 1.3rem;
+}
+
+.container-about-insidecontainer-descriptioncontainer-btn {
+  background: $themenColor;
+  padding: $btnPadding;
+  text-transform: capitalize;
+  color: white;
+  border: none;
+  font-weight: $btnFontweight;
+  font-size: 0.9rem;
+  border-radius: 0.1rem;
+}
+
+.management-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15rem 0;
+  gap: 6rem;
+}
+
+.management-heading {
+  font-size: 2.8rem;
+  color: rgba($color: #000000, $alpha: 0.8);
+}
+
+.management-container-managers {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.management-container-managers-manager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left right";
+  min-height: 400px;
+  margin: 0 5%;
+}
+
+.manager-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
+}
+
+.profile-img {
+  position: relative;
+}
+
+.profile-img img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+
+.profile-img-linkedin {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  bottom: -1rem;
+  left: -1rem;
+  border-radius: 50%;
+}
+
+.profile-img-linkedin img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.manager-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5% 0;
+}
+
+.manager-description-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.manager-name {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: rgba($color: #000000, $alpha: 0.8);
+}
+
+.manager-position {
+  font-size: 2rem;
+  font-family: Helvetica sans-serif;
+  color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.manager-description {
+  line-height: 1.5rem;
+  color: rgba($color: #000000, $alpha: 0.8);
+}
+
+.press-title {
+  font-size: 2.8rem;
+  color: $headingColor;
+  margin-bottom: 3rem;
+}
+
+@media only screen and(max-width:1000px) {
+  .aboutus-container-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
-  
+
+  .aboutus-container-content-imgcontainer {
+    padding: 0 10%;
+  }
+
+  .container-about-insidecontainer-descriptioncontainer-description {
+    min-width: 60ch;
+  }
+
+  .management-container-managers-manager {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .manager-photo-container {
+    grid-area: top;
+  }
+
+  .manager-content-container {
+    justify-content: space-around;
+    align-items: center;
+    padding: 5% 0;
+    gap: 2.5rem;
+    grid-area: bottom;
+  }
+
+  .manager-description-heading {
+    align-items: center;
+  }
+
+  .manager-description {
+    text-align: center;
+  }
+
+  .left {
+    grid-area: right;
+  }
+}

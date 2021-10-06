@@ -1,3 +1,15 @@
+$themenColor: rgb(255, 136, 0);
+$headingColor: rgb(10, 124, 124);
+
+$btnPadding: 0.8rem 1.8rem;
+$btnFontweight: bolder;
+$btnFontsize: 1rem;
+
 .container {
   margin-top: 4.5rem;
+  border: 1px solid red;
+}
+
+.heading {
+  color: $headingColor;
 }

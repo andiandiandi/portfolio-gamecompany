@@ -1,4 +1,4 @@
-<div class="press-container">
+<div class="press-container" [style.backgroundImage]="renderBg? '' : 'none'">
     <div *ngFor="let blog of blogs" class="press-news-item zoom">
         <div class="press-news-item-img">
             <img [src]="blog.imgUrl" alt="">
