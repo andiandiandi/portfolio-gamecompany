@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,16 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  
   showHamburgerIcon: boolean = true;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   toggleHamburger(expand: boolean) {
-    if(expand){
+    if (expand) {
       this.showHamburgerIcon = false;
-    }
-    else{
+    } else {
       this.showHamburgerIcon = true;
     }
   }

@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
   slides: Slide[] = [
     {
       src: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-RldmHvd3W8E%2FWMGrZiaxYeI%2FAAAAAAAAAMI%2F1j5gVyimn-MDYxfLSGdcae04hH2x_dVgwCLcB%2Fs1600%2Fyvcctc0pomlrcmapqepo.png&f=1&nofb=1',
-      title: 'Mansion´s Universe',
+      title: 'Mansions Universe',
       description: 'A social fantasy town with endless possibilities.',
     },
     {

@@ -103,7 +103,8 @@ $btnFontsize: 1rem;
 
 .featuredgames {
   background-image: url("https://www.pngkey.com/png/full/377-3772788_join-us-yellow-swoosh-png.png");
-  background-size: 150%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .featuredgames-header {
@@ -171,7 +172,10 @@ $btnFontsize: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1a%2FAbstract-background-white-12.jpg&f=1&nofb=1");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-career-header {
@@ -193,6 +197,8 @@ $btnFontsize: 1rem;
   gap: 2rem;
   padding: 2rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+
 }
 
 .container-career-position-position-where {
@@ -232,10 +238,6 @@ $btnFontsize: 1rem;
 }
 
 @media only screen and (max-width: 1200px) {
-  .featuredgames {
-    background-image: none;
-  }
-
   .featuredgames-container-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

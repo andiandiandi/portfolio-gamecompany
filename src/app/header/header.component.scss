@@ -2,6 +2,7 @@ $themenColor: rgb(255, 136, 0);
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .header {
@@ -26,6 +27,10 @@ a {
   border: none;
   border-radius: 0.1rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $themenColor;
 }
 
 .header-hamburger-expanded {

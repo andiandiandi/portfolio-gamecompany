@@ -10,9 +10,7 @@
 
     <div *ngIf="showHamburgerIcon" class="header-hamburger">
         <button class="header-hamburger-btn" (click)="toggleHamburger(true)">
-            <img width="32px" height="32px"
-                src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Famazoniareal.com.br%2Fwp-content%2Fthemes%2Famazoniareal-2015%2Fimages%2Fmenu.png&f=1&nofb=1"
-                alt="">
+            <img width="32px" height="32px" src="assets/img/hamburger_icon.png" alt="">
         </button>
     </div>
 
@@ -24,14 +22,31 @@
         </button>
         <div class="header-hamburger-expanded">
             <ul class="header-hamburger-expanded-ul">
+                <li style="margin-bottom: 4rem;">
+                    <a routerLink="" (click)="toggleHamburger(false)">
+                        HOME
+                    </a>
+                </li>
                 <li>
-                    <a routerLink="/games">
+                    <a routerLink="/games" (click)="toggleHamburger(false)">
                         GAMES
                     </a>
                 </li>
-                <li>COMPANY</li>
-                <li>CAREER</li>
-                <li>NEWS</li>
+                <li>
+                    <a routerLink="/company" (click)="toggleHamburger(false)">
+                        COMPANY
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/career" (click)="toggleHamburger(false)">
+                        CAREER
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/news" (click)="toggleHamburger(false)">
+                        NEWS
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

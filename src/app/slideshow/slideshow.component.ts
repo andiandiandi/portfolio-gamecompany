@@ -1,4 +1,3 @@
-import { ThrowStmt } from '@angular/compiler';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 export interface Slide {

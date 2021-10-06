@@ -84,6 +84,7 @@ $btnFontsize: 1rem;
   max-height: $gamesImageHeight;
   min-height: $gamesImageHeight;
   width: 100%;
+  object-fit: cover;
 }
 
 .container-games-game-container {
@@ -91,13 +92,18 @@ $btnFontsize: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 60%;
+  top: 40%;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
   border: none;
   z-index: 1;
+  gap: 1rem;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
 }
 
 .container-games-game-container-playbtn {
@@ -176,7 +182,9 @@ $btnFontsize: 1rem;
   color: red;
   margin-top: 3.5rem;
   color: white;
+  background: rgba($color: #aaa, $alpha: 0.5);
   font-size: 3.5rem;
+  padding: .5rem 1rem;
 }
 
 .container-games-game-container-description {
@@ -227,6 +235,6 @@ $btnFontsize: 1rem;
   }
 
   .container-games-game-container {
-    top: 55%;
+    top: 45%;
   }
 }
