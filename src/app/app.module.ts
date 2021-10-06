@@ -42,7 +42,7 @@ const routes: Routes = [
     PressPaneComponent,
     ErrorComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent],
