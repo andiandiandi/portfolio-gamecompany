@@ -35,7 +35,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     container.style.left = '0';
     container.style.width = '100%';
     container.style.height = '100%';
-    container.style.transition = 'transform 1.2s linear, opacity 2.4s linear';
+    container.style.transition = 'transform 1.5s ease-out, opacity 1.5s ease-in';
     container.style.zIndex = '2';
 
     let img = document.createElement('img');
@@ -89,35 +89,8 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     }, 0);
   }
 
-  private startInterval() {
-    this.stopInterval();
-    this.sliderInterval = setInterval(() => {
-      setTimeout(() => {
-        if (!this.skip) this.doSlide(false);
-        else this.skip = false;
-      }, 0);
-    }, this.changeInterval);
-  }
-
   ngOnInit(): void {
     if (!this.slides) throw Error('no input for slides');
-    //this.doSlide();
-    /*
-    document.addEventListener(
-      'visibilitychange',
-      () => {
-        if (document.hidden) {
-          this.stopInterval();
-          console.log('hidden');
-        } else {
-          this.startInterval();
-          console.log('visible');
-        }
-      },
-      false
-    );
-    this.startInterval();
-    */  
   }
 
   stopInterval() {

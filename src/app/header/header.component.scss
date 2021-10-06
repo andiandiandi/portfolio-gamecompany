@@ -1,6 +1,6 @@
 $themenColor: rgb(255, 136, 0);
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -73,9 +73,14 @@ a{
   font-size: small;
   color: rgba($color: #312e2e, $alpha: 0.8);
   text-transform: uppercase;
+  padding: 0.5rem 1rem;
 }
 
-.header-container-list-item a{
+.header-container-list-item:hover {
+  background-color: rgba($color: #aaa, $alpha: 0.5);
+}
+
+.header-container-list-item a {
   color: inherit;
 }
 
