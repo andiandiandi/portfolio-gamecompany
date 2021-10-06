@@ -1,3 +1,4 @@
+import { ErrorComponent } from './error/error.component';
 import { GamesComponent } from './games/games.component';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path: 'company', component: CompanyComponent },
   { path: 'career', component: CareerComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'error', component: ErrorComponent },
+  { path: '**', redirectTo: 'error' },
 ];
 
 @NgModule({
@@ -37,6 +40,7 @@ const routes: Routes = [
     CompanyComponent,
     NewsComponent,
     PressPaneComponent,
+    ErrorComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],

@@ -107,15 +107,15 @@ $btnFontsize: 1rem;
 }
 
 .container-games-game-container-playbtn {
-  width: 180px;
-  height: 50px;
   font-weight: bold;
+  padding: 1rem 1.5rem;
   border-radius: 0.1rem;
   text-transform: uppercase;
   background: white;
   color: $themenColor;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .flipimg {
@@ -167,9 +167,10 @@ $btnFontsize: 1rem;
 .container-games-game-container-playbtn-container {
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
   gap: 0.4rem;
+  text-decoration: none;
+  color: $themenColor;
 }
 
 .container-games-game-container-playbtn-container img {
@@ -184,7 +185,7 @@ $btnFontsize: 1rem;
   color: white;
   background: rgba($color: #aaa, $alpha: 0.5);
   font-size: 3.5rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .container-games-game-container-description {
