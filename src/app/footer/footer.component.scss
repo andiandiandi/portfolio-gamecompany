@@ -8,6 +8,24 @@ a {
   text-decoration: none;
 }
 
+::-webkit-input-placeholder {
+  padding-left: 1%;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  padding-left: 1%;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  padding-left: 1%;
+}
+
+:-ms-input-placeholder {
+  padding-left: 1%;
+}
+
 .container {
   background: rgba(17, 17, 17, 0.9);
 }
