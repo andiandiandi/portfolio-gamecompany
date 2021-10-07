@@ -53,25 +53,21 @@
             <span>
                 Jobs available in
             </span>
-            <select name="location" id="location-select">
-                <option value="">All locations</option>
-                <option value="dog">Remote Job</option>
-                <option value="cat">Hamburg, Germany</option>
-                <option value="hamster">Stuttgart, Germany</option>
+            <select name="location" id="location-select" (change)="filterJobs($event.target,'location')">
+                <option value="">All</option>
+                <option *ngFor="let location of locations">{{location}}</option>
             </select>
             <span>
                 and in
             </span>
-            <select name="department" id="department-select">
-                <option value="">All departments</option>
-                <option value="Remote">Remote</option>
-                <option value="Hamburg">Office / HQ Hamburg </option>
-                <option value="Stuttgart">Office / HQ Stuttgart</option>
+            <select name="department" id="department-select" (change)="filterJobs($event.target,'department')">
+                <option value="">All</option>
+                <option *ngFor="let department of departments">{{department}}</option>
             </select>
-            <div class="jobs-amount-container">
-                <span>{{jobs.length}} found</span>
-            </div>
         </div>
-        <app-open-positions style="width:80%;" [jobs]="jobs" [widthInPercent]="100" [backgroundImage]="false"></app-open-positions>
+        <app-open-positions style="width:80%;"
+            [jobs]="jobs | selectionFilter:{property:'location',filterValue:selectedLocation} | selectionFilter:{property:'locationType',filterValue:selectedDepartment}"
+            [widthInPercent]="100" [backgroundImage]="false" [itemCounter]="true">
+        </app-open-positions>
     </div>
 </div>

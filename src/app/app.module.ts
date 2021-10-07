@@ -11,7 +11,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ContactUsBtnComponent } from './contact-us-btn/contact-us-btn.component';
-import { CareerComponent } from './career/career.component';
+import { CareerComponent, SelectionFilter } from './career/career.component';
 import { CompanyComponent } from './company/company.component';
 import { NewsComponent } from './news/news.component';
 import { PressPaneComponent } from './press-pane/press-pane.component';
@@ -43,6 +43,7 @@ const routes: Routes = [
     PressPaneComponent,
     ErrorComponent,
     OpenPositionsComponent,
+    SelectionFilter
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule],

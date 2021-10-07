@@ -15,6 +15,9 @@ export class OpenPositionsComponent implements OnInit {
 
   @Input()
   backgroundImage : boolean = true;
+  
+  @Input()
+  itemCounter : boolean = false;
 
   @Input()
   jobs: Job[] = [];

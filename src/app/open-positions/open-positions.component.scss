@@ -17,6 +17,17 @@ $btnFontsize: 1rem;
   width: 100%;
 }
 
+.open-positions-counter {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+}
+
+.open-positions-counter span {
+  color: rgba($color: #000000, $alpha: 0.8);
+  font-style: italic;
+}
+
 .container-career-positions {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

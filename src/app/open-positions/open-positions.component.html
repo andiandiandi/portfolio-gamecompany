@@ -1,4 +1,7 @@
 <div class="container-career" [style.backgroundImage]="backgroundImage? '' : 'none'">
+    <div *ngIf="itemCounter" class="open-positions-counter">
+        <span>{{jobs.length}} Positions</span>
+    </div>
     <div class="container-career-positions" [style.width]="widthInPercent + '%'">
         <div *ngFor="let job of jobs" class="container-career-positions-position">
             <div class="container-career-position-position-where">
