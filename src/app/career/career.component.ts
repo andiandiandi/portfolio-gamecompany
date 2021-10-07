@@ -14,6 +14,8 @@ export class CareerComponent implements OnInit {
   selectedLocation: string = '';
   selectedDepartment: string = '';
 
+  companyImages: { path: string }[] = [];
+
   constructor(private dataService: DataService) {}
 
   filterJobs(target: any, selectOption: string) {
@@ -25,6 +27,18 @@ export class CareerComponent implements OnInit {
     this.jobs = this.dataService.getJobs();
     this.locations = [...new Set(this.jobs.map((item) => item.location))];
     this.departments = [...new Set(this.jobs.map((item) => item.locationType))];
+
+    this.companyImages = [
+      {
+        path: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftechnofaq.org%2Fwp-content%2Fuploads%2F2018%2F10%2Ftax-advantaged-employee-share-schemes_322618619-1024x621.jpg&f=1&nofb=1',
+      },
+      {
+        path: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-ZaLzua1l2gQ%2FUzCaXLK0fYI%2FAAAAAAAAJqI%2FJHIP7Lu1gIs%2Fs1600%2F5654447_hiweb.jpg&f=1&nofb=1',
+      },
+      {
+        path: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.80000hours.org%2Fwp-content%2Fuploads%2F2015%2F07%2Fworking2-fullres-100031101-orig.jpg&f=1&nofb=1',
+      },
+    ];
   }
 }
 

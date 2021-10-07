@@ -16,6 +16,7 @@ import { CompanyComponent } from './company/company.component';
 import { NewsComponent } from './news/news.component';
 import { PressPaneComponent } from './press-pane/press-pane.component';
 import { OpenPositionsComponent } from './open-positions/open-positions.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -43,9 +44,13 @@ const routes: Routes = [
     PressPaneComponent,
     ErrorComponent,
     OpenPositionsComponent,
-    SelectionFilter
+    SelectionFilter,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled'})],
+  imports: [
+    IvyCarouselModule,
+    BrowserModule,
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+  ],
   exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent],
