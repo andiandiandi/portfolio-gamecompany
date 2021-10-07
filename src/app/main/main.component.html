@@ -1,6 +1,6 @@
 <app-contact-us-btn></app-contact-us-btn>
 <div class="container">
-    <app-slideshow [slides]="slides"></app-slideshow>
+    <app-slideshow></app-slideshow>
     <div class="container-about">
         <div class="container-about-insidecontainer">
             <div class="container-about-insidecontainer-bg">
@@ -89,105 +89,8 @@
             </div>
         </div>
     </div>
-    <div class="container-career">
-        <h1 class="container-career-header">
-            Open Positions
-        </h1>
-        <div class="container-career-positions">
-            <div class="container-career-positions-position">
-                <div class="container-career-position-position-where">
-                    Remote
-                </div>
-                <h2 class="container-career-positions-position-description">
-                    Customer Service Representative, Casual Games
-                </h2>
-                <div class="container-career-positions-position-icon">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/location-1359-439104.png" alt="" width="32px"
-                        height="32px">
-                    <span class="container-career-positions-position-icon-description">
-                        Remote Job
-                    </span>
-                </div>
-            </div>
-            <div class="container-career-positions-position">
-                <div class="container-career-position-position-where">
-                    Remote
-                </div>
-                <h2 class="container-career-positions-position-description">
-                    Customer Service Representative, Casual Games
-                </h2>
-                <div class="container-career-positions-position-icon">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/location-1359-439104.png" alt="" width="32px"
-                        height="32px">
-                    <span class="container-career-positions-position-icon-description">
-                        Remote Job
-                    </span>
-                </div>
-            </div>
-            <div class="container-career-positions-position">
-                <div class="container-career-position-position-where">
-                    Remote
-                </div>
-                <h2 class="container-career-positions-position-description">
-                    Customer Service Representative, Casual Games
-                </h2>
-                <div class="container-career-positions-position-icon">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/location-1359-439104.png" alt="" width="32px"
-                        height="32px">
-                    <span class="container-career-positions-position-icon-description">
-                        Remote Job
-                    </span>
-                </div>
-            </div>
-            <div class="container-career-positions-position">
-                <div class="container-career-position-position-where">
-                    Remote
-                </div>
-                <h2 class="container-career-positions-position-description">
-                    Customer Service Representative, Casual Games
-                </h2>
-                <div class="container-career-positions-position-icon">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/location-1359-439104.png" alt="" width="32px"
-                        height="32px">
-                    <span class="container-career-positions-position-icon-description">
-                        Remote Job
-                    </span>
-                </div>
-            </div>
-            <div class="container-career-positions-position">
-                <div class="container-career-position-position-where">
-                    Remote
-                </div>
-                <h2 class="container-career-positions-position-description">
-                    Customer Service Representative, Casual Games
-                </h2>
-                <div class="container-career-positions-position-icon">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/location-1359-439104.png" alt="" width="32px"
-                        height="32px">
-                    <span class="container-career-positions-position-icon-description">
-                        Remote Job
-                    </span>
-                </div>
-            </div>
-            <div class="container-career-positions-position">
-                <div class="container-career-position-position-where">
-                    Remote
-                </div>
-                <h2 class="container-career-positions-position-description">
-                    Customer Service Representative, Casual Games
-                </h2>
-                <div class="container-career-positions-position-icon">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/location-1359-439104.png" alt="" width="32px"
-                        height="32px">
-                    <span class="container-career-positions-position-icon-description">
-                        Remote Job
-                    </span>
-                </div>
-            </div>
-        </div>
-        <a class="container-career-anchor" routerLink="/career">
-            All open positions
-        </a>
-    </div>
+    <!--todo-->
+    <h1 class="career-header">Open Positions</h1>
+    <app-open-positions [amountToShow]="5" [widthInPercent]="90"></app-open-positions>
     <app-press-pane [numberOfBlogs]="5" [showPress]="false"></app-press-pane>
 </div>

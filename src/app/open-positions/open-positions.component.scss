@@ -1,0 +1,88 @@
+$themenColor: rgb(255, 115, 0);
+$gamesImageHeight: 750px;
+$headingSize: 2.5rem;
+$btnPadding: 0.8rem 1.8rem;
+$btnFontweight: bolder;
+$btnFontsize: 1rem;
+
+.container-career {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1a%2FAbstract-background-white-12.jpg&f=1&nofb=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.container-career-positions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.container-career-positions-position {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+}
+
+.container-career-position-position-where {
+  color: rgba($color: $themenColor, $alpha: 0.8);
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.container-career-positions-position-description {
+  color: rgba($color: #000, $alpha: 0.9);
+}
+
+.container-career-positions-position-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.container-career-positions-position-icon-description {
+  font-size: 0.9rem;
+}
+
+.container-career-position-position-icon-description {
+  color: rgba($color: #000, $alpha: 0.7);
+}
+
+.container-career-anchor {
+  border: none;
+  text-decoration: none;
+  padding: $btnPadding;
+  background: $themenColor;
+  color: white;
+  font-weight: $btnFontweight;
+  font-size: $btnFontsize;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container-career-positions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-career-positions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container-career-positions {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Slide } from '../main/main.component';
+import { DataService, Slide } from '../shared/data.service';
 
 enum MoveDirection {
   Left,
@@ -12,14 +12,13 @@ enum MoveDirection {
   styleUrls: ['./slideshow.component.scss'],
 })
 export class SlideshowComponent implements OnInit, OnDestroy {
-  @Input()
-  slides!: Slide[];
+  slides: Slide[] = [];
   index: number = 0;
   sliderInterval: any;
   changeInterval: number = 2000;
   skip: boolean = false;
 
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
   createClone() {
     let container = document.createElement('div');
@@ -86,7 +85,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    if (!this.slides) throw Error('no input for slides');
+    this.slides = this.dataService.getSlides();
   }
 
   stopInterval() {

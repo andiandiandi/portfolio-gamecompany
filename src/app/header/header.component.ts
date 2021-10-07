@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../shared/data.service';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   showHamburgerIcon: boolean = true;
-
-  constructor(private router: Router) {}
+  amountOfJobs!: number;
+  constructor(private dataService: DataService, private router: Router) {}
 
   toggleHamburger(expand: boolean) {
     if (expand) {
@@ -19,5 +20,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.amountOfJobs = this.dataService.getJobs().length;
+  }
 }

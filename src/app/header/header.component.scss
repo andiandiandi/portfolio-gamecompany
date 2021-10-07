@@ -15,7 +15,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  padding: 0.8rem 10rem;
+  padding: 0.8rem 5%;
   border-bottom: rgba($color: #aaa, $alpha: 0.6) 1px solid;
 }
 
@@ -110,11 +110,20 @@ a {
 
   .header {
     background-color: $themenColor;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 
   .header-container {
     display: none;
   }
+}
+
+@media only screen and (max-width: 576px) {
+  .header {
+    background-color: $themenColor;
+    padding-left: 0;
+    padding-right: 5%;
+  }
+
 }

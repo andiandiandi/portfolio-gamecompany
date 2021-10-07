@@ -1,0 +1,22 @@
+<div class="container-career" [style.backgroundImage]="backgroundImage? '' : 'none'">
+    <div class="container-career-positions" [style.width]="widthInPercent + '%'">
+        <div *ngFor="let job of jobs" class="container-career-positions-position">
+            <div class="container-career-position-position-where">
+                {{job.location}}
+            </div>
+            <h2 class="container-career-positions-position-description">
+                {{job.title}}
+            </h2>
+            <div class="container-career-positions-position-icon">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/location-1359-439104.png" alt="" width="32px"
+                    height="32px">
+                <span class="container-career-positions-position-icon-description">
+                    {{job.locationType}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <a class="container-career-anchor" routerLink="/career">
+        All open positions
+    </a>
+</div>
