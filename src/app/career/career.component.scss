@@ -107,40 +107,6 @@ a {
   z-index: 2;
 }
 
-.container-games-arrowdown {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-  bottom: -7rem;
-  width: 32px;
-  height: 32px;
-}
-
-.container-games-arrowdown img {
-  -webkit-animation: mover 0.5s infinite alternate;
-  animation: mover 0.5s infinite alternate;
-  color: black;
-  width: 32px;
-}
-@-webkit-keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-1rem);
-  }
-}
-@keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-1rem);
-  }
-}
-
 .review-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
