@@ -26,9 +26,28 @@ export class CareerComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
 
-  toggleExpanded(item: Faq) {
-    this.faq.forEach((i) => (i.expanded = false));
-    item.expanded = true;
+  toggleExpanded(item: Faq, event: any) {
+    const t = event.target as HTMLElement;
+    let parent = undefined;
+    if (t.tagName == 'DIV') {
+      parent = t;
+    }
+    let p: HTMLElement | undefined = undefined;
+    if (parent)
+      p = parent.getElementsByClassName(
+        'faq-container-item-answer'
+      )[0] as HTMLElement;
+    else
+      p = event.target.parentNode.getElementsByClassName(
+        'faq-container-item-answer'
+      )[0];
+    setTimeout(() => {
+      if (!p!.innerHTML) p!.innerHTML = item.answer;
+      this.faq.forEach((i) => {
+        if (i.expanded) i.expanded = false;
+      });
+      item.expanded = true;
+    }, 0);
   }
 
   filterJobs(target: any, selectOption: string) {
@@ -77,7 +96,7 @@ export class CareerComponent implements OnInit {
         answer:
           'If you are an EU-citizen or eligible for a Blue Card this process is easy, there should be no problems.\n' +
           'If you are in none of these categories the process involves more steps, nevertheless we will assist you to bring your loved ones as soon as possible.\n' +
-          'For detailed information see: https://www.berlin.de/willkommenszentrum/en/families/reunification-of-families/',
+          'For detailed information see: <a href=https://www.berlin.de/willkommenszentrum/en/families/reunification-of-families/>https://www.berlin.de/willkommenszentrum/en/families/reunification-of-families/</a>',
         expanded: false,
       },
     ];

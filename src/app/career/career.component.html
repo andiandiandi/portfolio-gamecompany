@@ -78,11 +78,11 @@
     </div>
     <div class="faq-container">
         <h1 class="faq-container-header">FAQ</h1>
-        <div *ngFor="let item of faq" class="faq-container-item" (click)="toggleExpanded(item)">
+        <div *ngFor="let item of faq" class="faq-container-item" (click)="toggleExpanded(item,$event)">
             <button class="faq-container-item-btn" [style.display]="item.expanded? 'none' : 'block'">+</button>
             <p class="faq-container-item-question">{{item.question}}</p>
             <p class="faq-container-item-answer" [style.display]="item.expanded? 'block' : 'none'"
-                [style.opacity]="item.expanded? '1' : '0'">{{item.answer}}</p>
+                [style.opacity]="item.expanded? '1' : '0'"></p>
         </div>
     </div>
 </div>
