@@ -10,7 +10,7 @@ export class AppComponent implements AfterViewInit {
   pageLoaded = false;
 
   ngAfterViewInit(): void {
-    var millisecondsToWait = 1500;
+    var millisecondsToWait = 1000;
     setTimeout(() => {
       this.pageLoaded = true;
     },millisecondsToWait);

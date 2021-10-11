@@ -5,6 +5,13 @@ $btnPadding: 0.8rem 1.8rem;
 $btnFontweight: bolder;
 $btnFontsize: 1rem;
 
+.career-header {
+  text-align: center;
+  margin: 5rem;
+  font-size: $headingSize;
+  color: rgba($color: #000000, $alpha: 0.8);
+}
+
 .container-career {
   position: relative;
   display: flex;

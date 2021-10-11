@@ -1,21 +1,24 @@
-<div class="press-container" [style.backgroundImage]="renderBg? '' : 'none'">
-    <div *ngFor="let blog of blogs" class="press-news-item zoom">
-        <div class="press-news-item-img">
-            <img [src]="blog.imgUrl" alt="">
-        </div>
-        <div class="press-news-item-content">
-            <p class="press-news-item-content-date">
-                Aug 9, 2021
-            </p>
-            <p class="press-news-item-content-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus vero iste id aperiam
-                reiciendis labore iure necessitatibus quod repellendus natus perferendis fuga delectus numquam,
-                quisquam doloribus fugit quae! Veritatis!
-            </p>
-            <div class="press-news-item-content-readmore">
-                <a routerLink="/error" class="press-news-item-readmore-anchor">
-                    read more
-                </a>
+<div class="press-supercontainer">
+    <h1 class="press-header">Press</h1>
+    <div class="press-container" [style.backgroundImage]="backgroundImage? '' : 'none'">
+        <div *ngFor="let blog of blogs" class="press-news-item zoom">
+            <div class="press-news-item-img">
+                <img [src]="blog.imgUrl" alt="">
+            </div>
+            <div class="press-news-item-content">
+                <p class="press-news-item-content-date">
+                    Aug 9, 2021
+                </p>
+                <p class="press-news-item-content-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus vero iste id aperiam
+                    reiciendis labore iure necessitatibus quod repellendus natus perferendis fuga delectus numquam,
+                    quisquam doloribus fugit quae! Veritatis!
+                </p>
+                <div class="press-news-item-content-readmore">
+                    <a routerLink="/error" class="press-news-item-readmore-anchor">
+                        read more
+                    </a>
+                </div>
             </div>
         </div>
     </div>

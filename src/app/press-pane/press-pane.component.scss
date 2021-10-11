@@ -1,3 +1,10 @@
+$themenColor: rgb(255, 115, 0);
+$gamesImageHeight: 750px;
+$headingSize: 2.5rem;
+$btnPadding: 0.8rem 1.8rem;
+$btnFontweight: bolder;
+$btnFontsize: 1rem;
+
 *,
 *::before,
 *::after {
@@ -5,14 +12,31 @@
   margin: 0;
 }
 
+.press-supercontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1a%2FAbstract-background-white-12.jpg&f=1&nofb=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: rgba($color: #aaa, $alpha: 0.3) 1px solid;
+}
+
+.press-header {
+  text-align: center;
+  font-size: $headingSize;
+  color: rgba($color: #000000, $alpha: 0.8);
+  margin-top: 5rem;
+}
+
 .press-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2rem;
+  padding-top: 0;
   gap: 2rem;
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1a%2FAbstract-background-white-12.jpg&f=1&nofb=1");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .press-news-item {

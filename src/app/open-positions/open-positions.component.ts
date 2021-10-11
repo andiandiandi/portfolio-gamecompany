@@ -14,13 +14,16 @@ export class OpenPositionsComponent implements OnInit {
   widthInPercent: number = 100;
 
   @Input()
-  backgroundImage : boolean = true;
-  
+  backgroundImage: boolean = true;
+
   @Input()
-  itemCounter : boolean = false;
+  itemCounter: boolean = false;
 
   @Input()
   jobs: Job[] = [];
+
+  @Input()
+  header: boolean = false;
 
   constructor(private dataService: DataService) {}
 
