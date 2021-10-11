@@ -9,6 +9,40 @@ a {
   text-decoration: none;
 }
 
+.container-games-arrowdown {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: -8rem;
+  width: 32px;
+  height: 32px;
+}
+
+.container-games-arrowdown img {
+  -webkit-animation: mover 0.5s infinite alternate;
+  animation: mover 0.5s infinite alternate;
+  color: black;
+  width: 32px;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+
 .container {
   margin-top: 4.5rem;
   display: flex;
