@@ -52,13 +52,15 @@ export class SlideshowComponent implements OnInit, OnDestroy {
       setTimeout(() => {
         if ($event?.target?.parentNode)
           $event.target.parentNode.removeChild($event.target);
+        /*
         console.log(
           'removed node, now children: ' + slideshowContainer?.children.length
         );
+        */
       }, 0);
       //slideshowContainer?.removeChild($event.target);
     }
-    console.log(slideshowContainer?.children.length);
+    //console.log(slideshowContainer?.children.length);
     return container;
   }
 
