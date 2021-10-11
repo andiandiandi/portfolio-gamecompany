@@ -1,4 +1,10 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { DataService, Slide } from '../shared/data.service';
 
 enum MoveDirection {
@@ -17,7 +23,6 @@ export class SlideshowComponent implements OnInit, OnDestroy {
   sliderInterval: any;
   changeInterval: number = 2000;
   skip: boolean = false;
-
   constructor(private dataService: DataService) {}
 
   createClone() {
