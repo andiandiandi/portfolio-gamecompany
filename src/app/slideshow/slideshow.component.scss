@@ -1,13 +1,13 @@
 $themenColor: rgb(255, 115, 0);
 $gamesImageHeight: 750px;
+$gamesImageHeightMobile: 450px;
 $headingSize: 2.5rem;
 $btnPadding: 0.8rem 1.8rem;
 $btnFontweight: bolder;
 $btnFontsize: 1rem;
 
-  .container-games {
+.container-games {
   position: relative;
-  min-height: $gamesImageHeight;
   max-height: $gamesImageHeight;
 }
 
@@ -73,18 +73,16 @@ $btnFontsize: 1rem;
 
 .container-games-game {
   position: relative;
-}
-
-#slideshow-container {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
 .container-games-game img {
   display: block;
-  max-height: $gamesImageHeight;
-  min-height: $gamesImageHeight;
-  width: 100%;
   object-fit: cover;
+  width: 100%;
+  max-height: $gamesImageHeight;
 }
 
 .container-games-game-container {
@@ -207,12 +205,12 @@ $btnFontsize: 1rem;
 }
 
 .container-games-arrowdown {
-  display: inline-block;
+  display: block;
   position: absolute;
-  right: 0;
   left: 0;
+  right: 0;
   margin: auto;
-  bottom: -4rem;
+  bottom: -7rem;
   width: 32px;
   height: 32px;
 }
@@ -240,16 +238,81 @@ $btnFontsize: 1rem;
   }
 }
 
+@media only screen and (max-width: 1100px) {
+  .container-games-navcontainer-btn-left {
+    font-size: 2.5rem;
+  }
+
+  .container-games-navcontainer-btn-right {
+    font-size: 2.5rem;
+  }
+
+  .container-games-game-container {
+    top: 30%;
+  }
+
+  .container-games-game-container-header {
+    font-size: 2rem;
+  }
+
+  .container-games-game-container-description {
+    font-size: 1.6rem;
+  }
+
+  .container-games-game-container-playbtn-container {
+    font-size: 0.9rem;
+  }
+
+  .container-games-game-container-playbtn-container img {
+    width: 32px;
+    max-height: 24px;
+    min-height: 24px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  .container-games-navcontainer-btn-left {
+    font-size: 2rem;
+  }
+
+  .container-games-navcontainer-btn-right {
+    font-size: 2rem;
+  }
+
+  .container-games {
+    min-height: $gamesImageHeightMobile;
+    max-height: $gamesImageHeightMobile;
+  }
+
+  .container-games-game img {
+    max-height: $gamesImageHeightMobile;
+    min-height: $gamesImageHeightMobile;
+  }
+
   .container-games-navcontainer-btn {
     font-size: 2rem;
   }
 
   .container-games-game-container {
-    top: 45%;
+    top: 40%;
+  }
+
+  .container-games-game-container-header {
+    font-size: 1rem;
   }
 
   .container-games-game-container-description {
-    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .container-games-game-container-playbtn-container {
+    font-size: 0.7rem;
+  }
+
+  .container-games-game-container-playbtn-container img {
+    width: 32px;
+    max-height: 24px;
+    min-height: 24px;
   }
 }

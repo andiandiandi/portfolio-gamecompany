@@ -8,7 +8,7 @@
                 <div>
                     <img id="slideshowImage" class="container-games-game-image" [src]="slides[index].src" alt="">
                 </div>
-                <div class="container-games-game-container">
+                <div class="container-games-game-container" (window:resize)="onResize($event)">
                     <div class="container-games-game-container-header">
                         <h3>
                             {{slides[index].title}}

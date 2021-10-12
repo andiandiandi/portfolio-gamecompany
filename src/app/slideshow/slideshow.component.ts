@@ -23,7 +23,20 @@ export class SlideshowComponent implements OnInit, OnDestroy {
   sliderInterval: any;
   changeInterval: number = 2000;
   skip: boolean = false;
+  slideshowContainerWidth: number = -1;
+  smartphoneWidthBreakpointInPx: number = 450;
+  DesktopWidthBreakpointInPx: number = 750;
+
   constructor(private dataService: DataService) {}
+
+  onResize(event: UIEvent | undefined) {
+    let width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    this.slideshowContainerWidth = width;
+    console.log(this.slideshowContainerWidth);
+  }
 
   createClone() {
     let container = document.createElement('div');
@@ -33,14 +46,24 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     container.style.left = '0';
     container.style.width = '100%';
     container.style.height = '100%';
+    const transitionDuration =
+      this.slideshowContainerWidth >= this.DesktopWidthBreakpointInPx
+        ? '1.5s'
+        : '.8s';
     container.style.transition =
-      'transform 1.5s ease-out, opacity 1.5s ease-in';
+      'transform ' + transitionDuration + ' ease-out, opacity ' + transitionDuration + ' ease-in';
     container.style.zIndex = '2';
 
     let img = document.createElement('img');
     img.style.display = 'block';
-    img.style.maxHeight = '750px';
-    img.style.minHeight = '750px';
+    img.style.maxHeight =
+      this.slideshowContainerWidth >= this.DesktopWidthBreakpointInPx
+        ? this.DesktopWidthBreakpointInPx + 'px'
+        : this.smartphoneWidthBreakpointInPx + 'px';
+    img.style.minHeight =
+      this.slideshowContainerWidth >= this.DesktopWidthBreakpointInPx
+        ? this.DesktopWidthBreakpointInPx + 'px'
+        : this.smartphoneWidthBreakpointInPx + 'px';
     img.style.width = '100%';
     img.style.objectFit = 'cover';
     img.setAttribute('src', this.slides[this.index].src);
@@ -92,6 +115,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.onResize(undefined);
     this.slides = this.dataService.getSlides();
   }
 
