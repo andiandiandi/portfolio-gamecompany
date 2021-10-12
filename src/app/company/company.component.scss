@@ -199,6 +199,11 @@ $btnFontsize: 1rem;
 }
 
 @media only screen and(max-width:1200px) {
+  .aboutus-container {
+    gap: 8rem;
+    margin-top: 2rem;
+  }
+
   .aboutus-container-content {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -236,6 +241,16 @@ $btnFontsize: 1rem;
   }
 }
 @media only screen and(max-width:576px) {
+  .container-about-insidecontainer-descriptioncontainer {
+    padding: 0;
+    margin: 0;
+  }
+
+  .management-container{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
   .aboutus-container {
     gap: 2rem;
   }
@@ -243,7 +258,10 @@ $btnFontsize: 1rem;
   .aboutus-container-content {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 0 1rem;
+    margin: 0;
   }
 
   .aboutus-container-content-imgcontainer {
@@ -260,6 +278,4 @@ $btnFontsize: 1rem;
   .manager-container {
     margin-top: 5rem;
   }
-
-  
 }

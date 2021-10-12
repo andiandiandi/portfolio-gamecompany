@@ -88,6 +88,11 @@ a {
   color: black;
 }
 
+.activeRouteHamburger {
+  font-weight: 900;
+  color: white;
+}
+
 .header-container-list-item:hover {
   background-color: rgba($color: #aaa, $alpha: 0.5);
 }
