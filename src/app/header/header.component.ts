@@ -13,11 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private dataService: DataService, private router: Router) {}
 
   toggleHamburger(expand: boolean) {
-    if (expand) {
-      this.showHamburgerIcon = false;
-    } else {
-      this.showHamburgerIcon = true;
-    }
+    expand ? (this.showHamburgerIcon = false) : (this.showHamburgerIcon = true);
   }
 
   ngOnInit(): void {

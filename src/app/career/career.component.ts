@@ -16,37 +16,36 @@ export class CareerComponent implements OnInit {
   jobs: Job[] = [];
   locations: string[] = [];
   departments: string[] = [];
-
-  selectedLocation: string = '';
-  selectedDepartment: string = '';
-
+  faqs: Faq[] = [];
   companyImages: { path: string }[] = [];
 
-  faq: Faq[] = [];
+  selectedLocation = '';
+  selectedDepartment = '';
 
   constructor(private dataService: DataService) {}
 
-  toggleExpanded(item: Faq, event: any) {
-    const t = event.target as HTMLElement;
+  toggleExpanded(selectedFaq: Faq, event: any) {
+    const target = event.target as HTMLElement;
     let parent = undefined;
-    if (t.tagName == 'DIV') {
-      parent = t;
-    }
-    let p: HTMLElement | undefined = undefined;
+
+    if (target.tagName == 'DIV') parent = target;
+
+    let paragraph: HTMLElement | undefined = undefined;
+    //paragraph oder parent-div angeklickt
     if (parent)
-      p = parent.getElementsByClassName(
+      paragraph = parent.getElementsByClassName(
         'faq-container-item-answer'
       )[0] as HTMLElement;
     else
-      p = event.target.parentNode.getElementsByClassName(
+      paragraph = event.target.parentNode.getElementsByClassName(
         'faq-container-item-answer'
       )[0];
+
+    //sync event-queue
     setTimeout(() => {
-      if (!p!.innerHTML) p!.innerHTML = item.answer;
-      this.faq.forEach((i) => {
-        if (i.expanded) i.expanded = false;
-      });
-      item.expanded = true;
+      if (!paragraph!.innerHTML) paragraph!.innerHTML = selectedFaq.answer;
+      this.faqs.forEach((faq) => (faq.expanded ? (faq.expanded = false) : -1));
+      selectedFaq.expanded = true;
     }, 0);
   }
 
@@ -57,9 +56,10 @@ export class CareerComponent implements OnInit {
 
   ngOnInit(): void {
     this.jobs = this.dataService.getJobs();
-    this.locations = [...new Set(this.jobs.map((item) => item.location))];
-    this.departments = [...new Set(this.jobs.map((item) => item.locationType))];
+    this.locations = [...new Set(this.jobs.map((job) => job.location))];
+    this.departments = [...new Set(this.jobs.map((job) => job.locationType))];
 
+    //free-to-use license
     this.companyImages = [
       {
         path: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftechnofaq.org%2Fwp-content%2Fuploads%2F2018%2F10%2Ftax-advantaged-employee-share-schemes_322618619-1024x621.jpg&f=1&nofb=1',
@@ -72,7 +72,7 @@ export class CareerComponent implements OnInit {
       },
     ];
 
-    this.faq = [
+    this.faqs = [
       {
         question: 'Can I work from home',
         answer:
@@ -112,9 +112,7 @@ export class SelectionFilter implements PipeTransform {
     items: Job[],
     filter: { property: 'location' | 'locationType'; filterValue: string }
   ): any {
-    if (!items || !filter || !filter.filterValue) {
-      return items;
-    }
-    return items.filter((a: Job) => a[filter.property] == filter.filterValue);
+    if (!items || !filter || !filter.filterValue) return items;
+    return items.filter((job) => job[filter.property] == filter.filterValue);
   }
 }

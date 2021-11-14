@@ -9,7 +9,6 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ContactUsBtnComponent } from './contact-us-btn/contact-us-btn.component';
 import { CareerComponent, SelectionFilter } from './career/career.component';
 import { CompanyComponent } from './company/company.component';
@@ -35,7 +34,6 @@ const routes: Routes = [
     FooterComponent,
     MainComponent,
     SlideshowComponent,
-    NavigationBarComponent,
     GamesComponent,
     ContactUsBtnComponent,
     CareerComponent,

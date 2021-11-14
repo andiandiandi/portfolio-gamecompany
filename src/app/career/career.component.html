@@ -27,21 +27,41 @@
                 alt="" width="32px" height="32px">
         </span>
     </div>
-    <div class="review-container">
-        <div class="review-container-brand">
-            <img src="assets/img/review_company_brand.png" alt="">
-        </div>
-        <div class="review-container-content">
-            <span class="rating-container">
-                <h6 class="rating-heading">Rating</h6>
-                <img src="/assets/img/5star.png" alt="">
-            </span>
-            <p class="review-container-content-p">
-                <span style="text-transform: uppercase;">
-                    Gamingverse
+    <div class="reviews">
+        <div class="review-container">
+            <div class="review-container-brand">
+                <img src="assets/img/ckLogo.png" alt="">
+            </div>
+            <div class="review-container-content">
+                <span class="rating-container">
+                    <h6 class="rating-heading">Rating</h6>
+                    <img src="/assets/img/5star.png" alt="">
                 </span>
-                is a superstar employer according to Cillian Kaska Solutions.
-            </p>
+                <p class="review-container-content-p">
+                    <span style="text-transform: uppercase;">
+                        Gamingverse
+                    </span>
+                    is a superstar employer according to Cilian Kaska Solutions.
+                </p>
+            </div>
+        </div>
+        <div class="review-container">
+            <div class="review-container-brand">
+                <img src="assets/img/reichsLogo.png" alt="">
+            </div>
+            <div class="review-container-content">
+                <span class="rating-container">
+                    <h6 class="rating-heading">Rating</h6>
+                    <img src="/assets/img/5star.png" alt="">
+                </span>
+                <p class="review-container-content-p">
+                    As one of the first partners of
+                    <span style="text-transform: uppercase;">
+                        Gamingverse
+                    </span>
+                    we, as a leading company in game development, vouch for their quality.
+                </p>
+            </div>
         </div>
     </div>
 
@@ -78,7 +98,7 @@
     </div>
     <div class="faq-container">
         <h1 class="faq-container-header">FAQ</h1>
-        <div *ngFor="let item of faq" class="faq-container-item" (click)="toggleExpanded(item,$event)">
+        <div *ngFor="let item of faqs" class="faq-container-item" (click)="toggleExpanded(item,$event)">
             <button class="faq-container-item-btn" [style.display]="item.expanded? 'none' : 'block'">+</button>
             <p class="faq-container-item-question">{{item.question}}</p>
             <p class="faq-container-item-answer" [style.display]="item.expanded? 'block' : 'none'"

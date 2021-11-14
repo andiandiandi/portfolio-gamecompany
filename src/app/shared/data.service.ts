@@ -20,6 +20,7 @@ export class DataService {
   private jobs: Job[] = [];
 
   constructor() {
+    //free-to-use-licence
     this.slides = [
       {
         src: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig08.deviantart.net%2F6ff8%2Ff%2F2015%2F346%2Ff%2Fd%2Fhypergod_asriel__wallpaper__by_lapinbeau-d9jxiq7.png&f=1&nofb=1',

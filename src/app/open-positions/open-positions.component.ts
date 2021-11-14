@@ -29,7 +29,6 @@ export class OpenPositionsComponent implements OnInit {
 
   ngOnInit(): void {
     if (!this.jobs) this.jobs = this.dataService.getJobs();
-    if (this.amountToShow)
-      this.jobs = this.dataService.getJobs().slice(0, this.amountToShow);
+    if (this.amountToShow) this.jobs = this.jobs.slice(0, this.amountToShow);
   }
 }

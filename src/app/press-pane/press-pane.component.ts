@@ -18,7 +18,7 @@ export class PressPaneComponent implements OnInit {
 
   @Input()
   backgroundImage: boolean = false;
-  
+
   @Input()
   header: boolean = false;
 

@@ -1,18 +1,17 @@
-.main-container{
-    width:100vw;
-    height:75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:1px solid black;
-    gap: 1rem;
+.main-container {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.main-container-homebtn{
-    border: none;
-    background: black;
-    color:white;
-    padding: .7rem;
-    border-radius: .2rem;
+.main-container-homebtn {
+  padding: 0.7rem;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 0.2rem;
 }
