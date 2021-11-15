@@ -2,9 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
-## Hosted on
-
-https://portfolio-gamecompany.netlify.app/
+## [Hosted on Netlify](https://portfolio-gamecompany.netlify.app)
 
 ## Development server
 
