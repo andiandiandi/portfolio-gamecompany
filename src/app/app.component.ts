@@ -8,11 +8,11 @@ import { AfterViewInit, Component } from '@angular/core';
 export class AppComponent implements AfterViewInit {
   title = 'portfolio-gamecompany';
   pageLoaded = false;
+  resolvingTime = 1500;
 
   ngAfterViewInit(): void {
-    var millisecondsToWait = 1000;
     setTimeout(() => {
       this.pageLoaded = true;
-    },millisecondsToWait);
+    }, this.resolvingTime);
   }
 }

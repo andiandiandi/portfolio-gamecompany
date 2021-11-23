@@ -16,6 +16,7 @@ import { NewsComponent } from './news/news.component';
 import { PressPaneComponent } from './press-pane/press-pane.component';
 import { OpenPositionsComponent } from './open-positions/open-positions.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { PlaceholderLoadingComponent } from './placeholder-loading/placeholder-loading.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -43,6 +44,7 @@ const routes: Routes = [
     ErrorComponent,
     OpenPositionsComponent,
     SelectionFilter,
+    PlaceholderLoadingComponent,
   ],
   imports: [
     IvyCarouselModule,
