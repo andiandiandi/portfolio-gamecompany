@@ -5,14 +5,6 @@ import { AfterViewInit, Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'portfolio-gamecompany';
-  pageLoaded = false;
-  resolvingTime = 1500;
-
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.pageLoaded = true;
-    }, this.resolvingTime);
-  }
 }

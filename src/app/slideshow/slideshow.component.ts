@@ -18,6 +18,7 @@ enum MoveDirection {
   styleUrls: ['./slideshow.component.scss'],
 })
 export class SlideshowComponent implements OnInit, OnDestroy {
+  @Input()
   slides: Slide[] = [];
   index: number = 0;
   sliderInterval: any;
@@ -115,7 +116,6 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.onResize(undefined);
-    this.slides = this.dataService.getSlides();
   }
 
   stopInterval() {

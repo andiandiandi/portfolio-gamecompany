@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/internal/Subscription';
+import { LoadingStateService } from '../shared/loading-state.service';
+import { ImagesCompanyService } from './images-company.service';
 
 interface Manager {
   name: string;
@@ -13,12 +16,23 @@ interface Manager {
   templateUrl: './company.component.html',
   styleUrls: ['./company.component.scss'],
 })
-export class CompanyComponent implements OnInit {
+export class CompanyComponent implements OnInit, OnDestroy {
+  loadingState!: boolean;
+  loadingStateSubscription!: Subscription;
+
   managers: Manager[] = [];
 
-  constructor() {}
+  constructor(
+    public imagesService: ImagesCompanyService,
+    private loadingStateService: LoadingStateService
+  ) {}
 
   ngOnInit(): void {
+    this.loadingStateSubscription =
+      this.loadingStateService.LoadingStateCompany.subscribe((loadingState) => {
+        this.loadingState = loadingState;
+      });
+
     this.managers = [
       {
         name: 'Max',
@@ -48,5 +62,9 @@ export class CompanyComponent implements OnInit {
         photoUrl: '',
       },
     ];
+  }
+
+  ngOnDestroy(): void {
+    this.loadingStateSubscription.unsubscribe();
   }
 }

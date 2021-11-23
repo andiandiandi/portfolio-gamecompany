@@ -1,6 +1,7 @@
 <app-contact-us-btn></app-contact-us-btn>
 <div class="container">
-    <app-slideshow></app-slideshow>
+    <app-placeholder-loading *ngIf="loadingState"></app-placeholder-loading>
+    <app-slideshow [slides]="slides"></app-slideshow>
     <div class="container-about">
         <div class="container-about-insidecontainer">
             <div class="container-about-insidecontainer-bg">
@@ -26,8 +27,7 @@
                 </a>
             </div>
             <div class="container-about-insidecontainer-imagecontainer">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Ff%2Ff2%2FMan_Looking_at_Phone_Cartoon_Vector.svg%2F512px-Man_Looking_at_Phone_Cartoon_Vector.svg.png&f=1&nofb=1"
-                    alt="">
+                <img [src]="imagesService.getImageMapping()['lookingAtPhone']" alt="">
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
             <div class="featuredgames-container-cards">
                 <div class="featuredgames-container-cards-card">
                     <div class="featuredgames-container-cards-card-imgcontainer">
-                        <img src="https://cdn.pixabay.com/photo/2013/04/01/08/26/cards-98382__340.png" alt="">
+                        <img [src]="imagesService.getImageMapping()['solitaire']" alt="">
                     </div>
                     <div class="featuredgames-container-cards-card-descriptioncontainer">
                         <header class="featuredgames-container-cards-card-descriptioncontainer-header">
@@ -54,7 +54,7 @@
                 </div>
                 <div class="featuredgames-container-cards-card">
                     <div class="featuredgames-container-cards-card-imgcontainer">
-                        <img src="https://openclipart.org/download/269496/mahjongtiles.svg" alt="">
+                        <img [src]="imagesService.getImageMapping()['mahjong']" alt="">
                     </div>
                     <div class="featuredgames-container-cards-card-descriptioncontainer">
                         <header class="featuredgames-container-cards-card-descriptioncontainer-header">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="featuredgames-container-cards-card">
                     <div class="featuredgames-container-cards-card-imgcontainer">
-                        <img src="https://cdn.pixabay.com/photo/2012/04/05/00/44/cookie-25400__340.png" alt="">
+                        <img [src]="imagesService.getImageMapping()['cookieland']" alt="">
                     </div>
                     <div class="featuredgames-container-cards-card-descriptioncontainer">
                         <header class="featuredgames-container-cards-card-descriptioncontainer-header">
