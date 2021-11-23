@@ -1,3 +1,4 @@
+import { ImagesMainService } from './images-main.service';
 import { NONE_TYPE } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import {
@@ -17,12 +18,13 @@ export class SlidesResolver implements Resolve<Slide[]> {
   constructor(
     private router: Router,
     private dataService: DataService,
+    private imagesMainService: ImagesMainService,
     private loadingStateService: LoadingStateService
   ) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     const slides = this.dataService.getSlides();
-    const images = slides.map((slide) => slide.src);
+    const images = this.imagesMainService.getImageUrls();
     const updateStateFunc = () =>
       this.loadingStateService.loadingStateMain.next(false);
 
