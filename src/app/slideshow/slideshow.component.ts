@@ -35,7 +35,6 @@ export class SlideshowComponent implements OnInit, OnDestroy {
       document.documentElement.clientWidth ||
       document.body.clientWidth;
     this.slideshowContainerWidth = width;
-    console.log(this.slideshowContainerWidth);
   }
 
   createClone() {

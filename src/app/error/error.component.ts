@@ -3,11 +3,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 @Component({
   selector: 'app-error',
   templateUrl: './error.component.html',
-  styleUrls: ['./error.component.scss']
+  styleUrls: ['./error.component.scss'],
 })
 export class ErrorComponent implements OnInit, OnDestroy {
-
-  constructor() { }
+  constructor() {}
 
   ngOnDestroy(): void {
     //this.variableStateService.error404.next(false);
@@ -16,5 +15,4 @@ export class ErrorComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     //this.variableStateService.error404.next(true);
   }
-
 }
